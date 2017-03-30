@@ -45,7 +45,7 @@ USER $NB_USER
 #    conda clean -tipsy
 RUN conda install --quiet --yes 'llvmlite'
 RUN conda install --quiet --yes 'hdf5=1.8.17'
-RUN /opt/conda/bin/pip install ipywidgets==5.2
+#RUN /opt/conda/bin/pip install ipywidgets==5.2
 RUN /opt/conda/bin/pip install pandas==0.18
 RUN /opt/conda/bin/pip install numexpr==2.5
 RUN /opt/conda/bin/pip install matplotlib==1.5
@@ -67,7 +67,7 @@ RUN /opt/conda/bin/pip install h5py==2.6
 
 
 # Activate ipywidgets extension in the environment that runs the notebook server
-RUN jupyter nbextension enable --py widgetsnbextension --sys-prefix
+#RUN jupyter nbextension enable --py widgetsnbextension --sys-prefix
 
 # Install Python 2 packages
 # Remove pyqt and qt pulled in for matplotlib since we're only ever going to
